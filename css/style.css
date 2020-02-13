@@ -25,11 +25,12 @@ nav#navTop li a{
     left: 0;
     width: 100%;
 }
-#page4{background-image: url(../images/fullpage_img06.png);}
-#page5{background-color: white;}
-#page5 img{width: 100%;
+#page4{background-color: white;}
+#page4 img{width: 100%;
 /*	background-image: url(../images/fullpage_img07.png);*/
 }
+#page5{background-image: url(../images/fullpage_img06.png);}
+
 .page{
 	background-repeat: no-repeat;
 	background-position: center;
