@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<title>NIKE</title>
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fullPage.css">
@@ -12,6 +13,7 @@
 	<script src="js/jquery.fullPage.js"></script>
 	<script src="js/jquery.colorbox.js"></script>
 	<script src="js/wow.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#fullpage").fullpage({
@@ -21,6 +23,12 @@
 				slideNavigation:true,
 				afterLoad:function(anchorslink,index){
 					console.log(anchorslink+","+index);
+					if(index == 1){
+						$("#onView00").addClass("move00");
+					}else{
+						$("#onView00").removeClass("move00");
+
+					}
 					if(index == 2){
 						$("#onView").addClass("move");
 					}else{
@@ -32,26 +40,71 @@
 						$("#onView01").removeClass("move01");
 					}
 				}
+
+			});
+			$(window).resize(function(){
+				wind();
+			});
+
+			function wind(){
+				var win = $(window).height();
+				$(".slider1").height(win);
+			}
+			 wind();
+
+			$(".sliderWrap").bxSlider({
+				pager:false,
+				controls:false
+			});
+
+			$(".main00>a").click(function(){
+				$(".blind").removeClass("blackBox");
+				$(".main00").hide();
 			});
 		});
 	</script>
+
 </head>
 <body>
+	<!-- menu -->
 	<nav id="navTop" class="clearfix">
-		<ul id="topMenu" class="clearfix">
+		<!-- <ul id="topMenu" class="clearfix">
 			<li data-menuanchor="1st"><a href="#1st">menu1</a></li>
 			<li data-menuanchor="2st"><a href="#2st">menu2</a></li>
 			<li data-menuanchor="3st"><a href="#3st">menu3</a></li>
 			<li data-menuanchor="4st"><a href="#4st">menu4</a></li>
 			<li data-menuanchor="5st"><a href="#5st">menu5</a></li>
-		</ul>
+		</ul> -->
 	</nav>
+
 	<div id="fullpage">
+		<!-- page1 -->
 		<div class="section page" id="page1" data-anchor="1st">
+			<h1>
+				<img src="images/logo.png" alt="">
+			</h1>
+			
+			<div class="main00" id="onView00">
+				<h3>나이키 신학기 컬렉션</h3>
+				<p>새로운 스타일로 활기 넘치는 새학기를 준비하세요.</p>
+				<a href="#">m o r e</a>
+			</div>
+
+			<div class="blind blackBox"></div>
+
+			<div class="image">
+				<img src="images/person.png" alt="" class="img01">
+				<img src="images/left.png" alt="" class="img02">
+				<img src="images/hand.png" alt="" class="img03">
+
+			</div>
+
 			<div class="scroll">
 				<a href="#2st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
+
 		</div>
+		<!-- page2 -->
 		<div class="section page" id="page2" data-anchor="2st">
 			<div class="main" id="onView">
 				<h3>Lorem ipsum.</h3>
@@ -60,14 +113,9 @@
 			</div>
 			<div class="scroll">
 				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
-			</div>
-			<!-- <div class="img clearfix">
-				<img src="images/fullpage_img02.jpg" alt="img02">
-				<img src="images/fullpage_img03.jpg" alt="img03">
-				<img src="images/fullpage_img04.jpg" alt="img04">
-				<img src="images/fullpage_img05.png" alt="img05">
-			</div> -->
+			</div>	
 		</div>
+		<!-- page3 -->
 		<div class="section page" id="page3" data-anchor="3st">
 			<div class="main" id="onView01">
 				<h3>Lorem ipsum.</h3>
@@ -77,19 +125,37 @@
 			<div class="scroll">
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
-			<!-- <video autoplay="autoplay" loop="loop" muted="muted">
-                <source src="https://nikevideo.nike.com/72451143001/202001/320/72451143001_6123038723001_6123037410001.mp4">
-            </video> -->
 		</div>
+		<!-- page4 -->
 		<div class="section page" id="page4" data-anchor="4st">
+			
+			<div class="sliderWrap">
+				<div class="slider1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt esse fugiat, est eveniet aspernatur vel odio praesentium alias asperiores assumenda, cupiditate quod quasi reprehenderit, ullam saepe. Totam eos corporis sapiente est enim laboriosam ab, placeat repellat recusandae provident illum tempore facilis rem cum, culpa doloribus, id porro explicabo vero!
+				</div>
+				<div class="slider1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt esse fugiat, est eveniet aspernatur vel odio praesentium alias asperiores assumenda, cupiditate quod quasi reprehenderit, ullam saepe. Totam eos corporis sapiente est enim laboriosam ab, placeat repellat recusandae provident illum tempore facilis rem cum, culpa doloribus, id porro explicabo vero!
+				</div>
+				<div class="slider1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt esse fugiat, est eveniet aspernatur vel odio praesentium alias asperiores assumenda, cupiditate quod quasi reprehenderit, ullam saepe. Totam eos corporis sapiente est enim laboriosam ab, placeat repellat recusandae provident illum tempore facilis rem cum, culpa doloribus, id porro explicabo vero!
+				</div>
+				<div class="slider1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt esse fugiat, est eveniet aspernatur vel odio praesentium alias asperiores assumenda, cupiditate quod quasi reprehenderit, ullam saepe. Totam eos corporis sapiente est enim laboriosam ab, placeat repellat recusandae provident illum tempore facilis rem cum, culpa doloribus, id porro explicabo vero!
+				</div>
+				<div class="slider1">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus deserunt esse fugiat, est eveniet aspernatur vel odio praesentium alias asperiores assumenda, cupiditate quod quasi reprehenderit, ullam saepe. Totam eos corporis sapiente est enim laboriosam ab, placeat repellat recusandae provident illum tempore facilis rem cum, culpa doloribus, id porro explicabo vero!
+				</div>
+			</div>
+
 			<div class="scroll">
 				<a href="#5st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
-			<!-- <img src="images/fullpage_img07.png" alt="img07"> -->
-		</div>   
-		<div class="section page" id="page5" data-anchor="5st">
-			
+		</div>  
+		<!-- page5  -->
+		<div class="section page fp-auto-height" id="page5" data-anchor="5st">
+			<div class="footer" style="height: 300px;background-color: orange;"></div>
 		</div>
+	</div>
 			
 		
 			
