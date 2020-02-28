@@ -12,14 +12,18 @@ nav#navTop{
 			position: fixed;z-index: 1;
 			width: 100%;
 			background-color:rgba(0,0,0,0.3);
-			padding-left: 10px;
+			padding-left:1510px;
+			height: 50px;
+
 		}
+	
 nav#navTop li{float: left;}
 nav#navTop li a{
 	display: block;
 	line-height: 50px;
 	text-align: center;
 	padding: 0 10px;
+	
 }
 /*.active{background-color: skyblue;}*/
 
@@ -38,7 +42,8 @@ nav#navTop li a{
 }
 #page1 h1{
 	position: absolute;
-	top: 12px;left: 120px;
+	top: 15px;left: 120px;
+	z-index: 3
 }
 
 #page1 h1>img{display: block;width: 200px;height:80px;padding-bottom: 10px;}
@@ -51,7 +56,15 @@ nav#navTop li a{
 /*page2*/
 #page2{background-color: black;}
 
-#page3{background-color:black;}
+#page3{background-color:black;position: relative;}
+#page3 .bgi img{
+	width: 1800px;height: 800px;
+	position: absolute;
+	left: 50%;
+	margin-left: -900px;
+	top: 50%;
+	margin-top: -400px;
+}
 
 #page4{background-color: black;}
 
@@ -117,7 +130,9 @@ nav#navTop li a{
 #onView00.move00{top: 50%;opacity: 1;z-index: 2}
 
 .scroll{
-	position: absolute;bottom: 20px;left: 50%;transform: translateX(-50%);
+	position: absolute;
+	bottom: 600px;left: 50%;
+	transform: translateX(-50%);
 	animation-name: xScroll;
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
@@ -127,78 +142,70 @@ nav#navTop li a{
 div.image{
 	
 	position: relative;
-	width: 100%;
+	left: 50%;
+	top: 20px;
+	margin-left: -900px;
+	width: 1800px;
 	height: 800px;
 	background-image: url(../images/shadow.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+
 .image .img01{
-	width:700px;
+	width:760px;
+	height: 640px;
 	position: absolute;
-	top: 50%;
-	transform: translateY(-45%);
-/*
-	left: 50%;
-	margin-left: 15px;
-*/
-    right: -99999px;
+	top: 18%;
+    right:-999px;
 	z-index:1;
-	transition:0.3s;
+	transition:0.5s;
+	transition-duration: 0.7s;
 	opacity: 0;
 }
 .image .img02{
-	width:550px;
+	width:600px;
+	height: 630px;
 	position: absolute;
-	top: 51%;
-	transform: translateY(-45%);
-/*
-	left: 24%;
-	margin-left: 15px;
-*/
-    left: -9999px;
+    left: -999px;
     z-index: 1;
-    transition:0.3s;
+    transition:1.4s;
     opacity: 0;
-}`
+}
 
 .image .img03{
-	width:500px;
+	width:300px;
+	height: 750px;
 	position: absolute;
-	top: 45%;
-	transform: translateY(-45%);
-	/*left: 10%;
-	margin-left: 15px;*/
-	left: -9999px;
+	top: 5%;
+	left: -999px;
     z-index: 1;
-    transition:0.3s;
+    transition:1.8s;
     opacity: 0;
 }
 
 
 .image.img img.img01{
-	left:50%;
-	top: 50%;
-	transform: translateY(-45%);
-	margin-left: 15px;
+
+	top:18%;
+	right:3%;
 	opacity: 1;
 
 }
 .image.img img.img02{
-	left: 24%;
-	top: 51%;
-	transform: translateY(-45%);
-	margin-left: 15px;
+
+	top: 17%;
+	left: 22%;
 	opacity: 1;
 
 }
 .image.img img.img03{
-	left: 10%;
-	top: 42%;
-	transform: translateY(-45%);
-	margin-left: 15px;
+
+	top: 5%;
+	left: 8%;
 	opacity: 1;
+
 }
 
 
@@ -228,6 +235,15 @@ div.image{
 
 
 @keyframes xScroll{
-	from{bottom: 20px;}
-	to{bottom: 40px;}
+	from{bottom: 100px;}
+	to{bottom: 80px;}
+}
+
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    height: 30px !important;
+    width: 100px !important;
+    margin: -6px 0 0 -6px;
+    border-radius: 50px !important;
+    transition:0.3s !important;
 }
