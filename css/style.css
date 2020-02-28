@@ -38,10 +38,10 @@ nav#navTop li a{
 }
 #page1 h1{
 	position: absolute;
-	top: 20px;left: 120px;
+	top: 12px;left: 120px;
 }
 
-#page1 h1>img{display: block;width: 250px;height:90px;padding-bottom: 10px;}
+#page1 h1>img{display: block;width: 200px;height:80px;padding-bottom: 10px;}
 
 #page1 .blind.blackBox{
 	width: 100%;height: 100%;background-color: rgba(0,0,0,0.9);
@@ -125,11 +125,13 @@ nav#navTop li a{
 }
 
 div.image{
+	
 	position: relative;
-	width: 1900px;
+	width: 100%;
 	height: 800px;
 	background-image: url(../images/shadow.png);
 	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .image .img01{
@@ -143,6 +145,8 @@ div.image{
 */
     right: -99999px;
 	z-index:1;
+	transition:0.3s;
+	opacity: 0;
 }
 .image .img02{
 	width:550px;
@@ -154,7 +158,9 @@ div.image{
 	margin-left: 15px;
 */
     left: -9999px;
-    z-index: 1
+    z-index: 1;
+    transition:0.3s;
+    opacity: 0;
 }`
 
 .image .img03{
@@ -162,10 +168,40 @@ div.image{
 	position: absolute;
 	top: 45%;
 	transform: translateY(-45%);
-	left: 10%;
-	margin-left: 15px;
+	/*left: 10%;
+	margin-left: 15px;*/
+	left: -9999px;
     z-index: 1;
+    transition:0.3s;
+    opacity: 0;
 }
+
+
+.image.img img.img01{
+	left:50%;
+	top: 50%;
+	transform: translateY(-45%);
+	margin-left: 15px;
+	opacity: 1;
+
+}
+.image.img img.img02{
+	left: 24%;
+	top: 51%;
+	transform: translateY(-45%);
+	margin-left: 15px;
+	opacity: 1;
+
+}
+.image.img img.img03{
+	left: 10%;
+	top: 42%;
+	transform: translateY(-45%);
+	margin-left: 15px;
+	opacity: 1;
+}
+
+
 
 #myVideo{
 	position: absolute;
