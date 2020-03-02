@@ -59,7 +59,16 @@ nav#navTop li a{
 }
 /*page2*/
 #page2{background-color: black;}
+#page2 img{
+    display: block;width: 25%;height: 100%;
+    float: left;
+}
 
+
+
+
+
+/*#page3*/
 #page3{background-color:black;position: relative;}
 #page3 .bgi img{
 	width: 1800px;height: 800px;
@@ -212,7 +221,33 @@ div.image{
 
 }
 
+.talk{
+    position: absolute;
+    top: 20px; 
+    width: 500px;
+    height: 40px;
+    left: 50%;
+    margin-left: -250px;
+}
 
+.talk a{
+    color: white;
+    display: block;
+    background-color: red;
+    width: 500px;
+    line-height: 40px;
+    font-size: 18px;
+    text-align: center;
+}
+.talk.tk a{
+    display: block;
+    color:white;
+    width: 300px;
+    line-height: 40px;
+    text-align: center;
+    background-color: skyblue;
+    opacity: 1;
+}
 
 #myVideo{
 	position: absolute;
