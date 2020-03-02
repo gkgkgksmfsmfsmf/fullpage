@@ -58,12 +58,39 @@ nav#navTop li a{
    
 }
 /*page2*/
-#page2{background-color: black;}
-#page2 img{
-    display: block;width: 25%;height: 100%;
-    float: left;
+#page2{background-color: black;position: relative;}
+#page2 .page2_img{
+    float: left;width: 25%;height: 100%;
+    
+    
+}
+#page2 .page2_img img{
+    display: block;height: 100%;
+}
+#page2 .shadow{
+/*
+    background-color:skyblue;
+    width: 25%;
+    height: 100%;
+*/  display: none;
+    position: absolute;
+/*
+    left: 0;
+    top: 0;
+    z-index: 3
+*/
 }
 
+#page2 .page2_img:hover .shadow{
+    display: block;
+    background-color:skyblue;
+    width: 25%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3
+}
 
 
 
