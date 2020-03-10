@@ -23,6 +23,7 @@
 				slideNavigation:true,
 				afterLoad:function(anchorslink,index){
 					console.log(anchorslink+","+index);
+					
 					if(index == 1){
 						$("#onView00").addClass("move00");
 					}else{
@@ -39,6 +40,15 @@
 					}else{
 						$("#onView01").removeClass("move01");
 					}
+
+
+					if(index !=1){
+						$("#navTop a").addClass("Color");
+					}else{
+						$("#navTop a").removeClass("Color");
+					}
+
+
 				}
 
 			});
@@ -63,11 +73,20 @@
 				$(".blind").removeClass("blackBox");
 				$(".main00").hide();
 				$(".image").addClass("img");
+				$(".pWrap").addClass("pWrap01");
+				$(".talk").addClass("tk");
 
 
                
 			});
+			
+			// $("#fp-nav ul li span").eq(0).append("test");
+
+
+			
+
 		});
+
 	</script>
 
 </head>
@@ -75,12 +94,13 @@
 	<!-- menu -->
 	<nav id="navTop" class="clearfix">
 		<ul id="topMenu" class="clearfix">
-			<li data-menuanchor="1st"><a href="#1st">menu1</a></li>
-			<li data-menuanchor="2st"><a href="#2st">menu2</a></li>
-			<li data-menuanchor="3st"><a href="#3st">menu3</a></li>
-			<li data-menuanchor="4st"><a href="#4st">menu4</a></li>
-			<li data-menuanchor="5st"><a href="#5st">menu5</a></li>
+			<li data-menuanchor="1st"><a href="#1st">NEW RELEASES</a></li>
+			<li data-menuanchor="2st"><a href="#2st">MEN</a></li>
+			<li data-menuanchor="3st"><a href="#3st">WOMEN</a></li>
+			<li data-menuanchor="4st"><a href="#4st">KIDS</a></li>
+			<li data-menuanchor="5st"><a href="#5st">LOGIN</a></li>
 		</ul>
+
 	</nav>
 
 	<div id="fullpage">
@@ -98,11 +118,23 @@
 
 			<div class="blind blackBox"></div>
 
+			<!-- <div class="pWrap">
+				<a href="#" class="shoes">shoes</a>
+				<a href="#" class="clothes">clothes</a>
+				<a href="#" class="bag">bag</a>
+			</div> -->
+
 			<div class="image">
                
                 <img src="images/person.png" alt="" class="img01">
                 <img src="images/left.png" alt="" class="img02">
                 <img src="images/hand.png" alt="" class="img03" >
+
+                <div class="pWrap">
+					<a href="#" class="shoes">shoes</a>
+					<a href="#" class="clothes">clothes</a>
+					<a href="#" class="bag">bag</a>
+				</div>	
                 
 			<div class="talk">
 			    <a href="#">나이키 신학기 컬렉션</a>
@@ -131,15 +163,16 @@
 				<div class="page2_img">
 				    <img src="images/fullpage_img05.png" alt="" class="i04">
 				</div>
-				<div class="scroll">
-					<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
-				</div>
+				
+			</div>
+			<div class="scroll01">
+				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
 		<!-- page3 -->
 		<div class="section page" id="page3" data-anchor="3st">
             <img src="images/nike01.jpg" alt="">
-			<div class="scroll">
+			<div class="scroll01">
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
