@@ -362,7 +362,7 @@ div.image{
 
 
 
-#page4{background-color: black;}
+
 
 
 
@@ -433,6 +433,12 @@ div.image{
 	animation-duration: 0.8s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
+	z-index: 3;
+}
+
+@keyframes xScroll{
+	from{bottom: 100px;}
+	to{bottom: 80px;}
 }
 
 .scroll01{
@@ -449,6 +455,14 @@ div.image{
 	from{bottom: 50px;}
 	to{bottom: 30px;}
 }
+
+/*#page4*/
+#page4{
+	background-image: url(../images/fire.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 
 
 
@@ -476,10 +490,7 @@ div.image{
 	
 
 
-@keyframes xScroll{
-	from{bottom: 100px;}
-	to{bottom: 80px;}
-}
+
 
 
 
