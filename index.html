@@ -82,6 +82,16 @@
 			
 			// $("#fp-nav ul li span").eq(0).append("test");
 
+			// $("#page2 .page2_img").hover(function(){
+			// 	var i = $(this).index();
+			// 	$("#page2 .page2_img").eq(i).
+			// },function(){
+
+			// });
+
+
+			var i = $("#page2 .page2_img").index();
+			$("#page2 .page2_img").eq(i).hover(function(){},function(){});
 
 			
 
@@ -150,6 +160,7 @@
 		</div>
 		<!-- page2 -->
 		<div class="section page clearfix" id="page2" data-anchor="2st">
+			<!-- <div class="bg"></div>
 			<div class="imgWrap">
 				<div class="page2_img">
 				    <img src="images/fullpage_img02.jpg" alt="" class="i01">
@@ -164,18 +175,51 @@
 				    <img src="images/fullpage_img05.png" alt="" class="i04">
 				</div>
 				
+			</div> -->
+			<div class="flexWrap">
+				<div class="flexbox"></div>
+				<div class="flexbox"></div>
+				<div class="flexbox"></div>
+				<div class="flexbox"></div>
 			</div>
 			<div class="scroll01">
 				<a href="#3st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
+
 		<!-- page3 -->
 		<div class="section page" id="page3" data-anchor="3st">
-            <img src="images/nike01.jpg" alt="">
+            
+           	<video data-autoplay loop muted>
+				<source src="https://nikevideo.nike.com/72451143001/201809/2294/72451143001_5837185153001_5837186743001.mp4" type="video/mp4">
+			</video>
+			<div class="bg"></div>
+			<div class="text01">
+				<h3>에어조던 33</h3>
+				<p>런칭이벤트</p>
+			</div>
+			<div class="text02">
+				<p>
+					에어조던 33을 구매하고, 오직 나이키닷컴 멤버만을 위해 준비된<br>
+					2020 농구 월드컵 아시아 예선전 티켓으로 경기를 생생하게 즐겨보세요.
+				</p>
+			</div>
+			<div class="text03">
+				<p>대상</p>
+				<p>에어조던 33을 구매한 NIKE.COM 멤버</p>
+			</div>
+			<div class="text04">
+				<p>이벤트 참여방법</p>
+				<p>1 STEP. 11월2일(금) 오전 10시 에어조던 33구매 <br> 2 STEP. 12월2일(일) 2020 농구 월드컵 아시아 예선전 대한민국 VS 요르단 관람</p>
+			</div>
+			<div class="text05">
+				<a href="#">에어조던 33 구매하러가기</a>
+			</div>
 			<div class="scroll01">
 				<a href="#4st"><img src="images/btn_scroll.png" alt=""></a>
 			</div>
 		</div>
+
 		<!-- page4 -->
 		<div class="section page" id="page4" data-anchor="4st">
 			<div class="scroll01">
